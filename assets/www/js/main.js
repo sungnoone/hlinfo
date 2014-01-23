@@ -1,6 +1,19 @@
 /* 2014/01/01 start */
 /* by wenjen sung */
 
+//service name
+//var SRV_GetListItems = "http://192.168.1.109:5000/api/items/"; // 需要URL參數
+//var SRV_PostData = "http://192.168.1.109:5000/api/post/"; //上傳資料
+//var SRV_QueryAll = "http://192.168.1.109:5000/api/query/all/"; // 查詢所有資料
+//var SRV_GetImage = "http://192.168.1.109:5000/api/file/";//透過ID抓圖 需要URL參數
+//var SRV_CheckUserHashCode = "http://192.168.1.109:5000/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
+
+var SRV_GetListItems = "http://infosrv.hanlin.com.tw/api/items/"; // 需要URL參數
+var SRV_PostData = "http://infosrv.hanlin.com.tw/api/post/"; //上傳資料
+var SRV_QueryAll = "http://infosrv.hanlin.com.tw/api/query/all/"; // 查詢所有資料
+var SRV_GetImage = "http://infosrv.hanlin.com.tw/api/file/";//透過ID抓圖 需要URL參數
+var SRV_CheckUserHashCode = "http://infosrv.hanlin.com.tw/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
+
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
 var file_items_infoYear = "info_year.txt";
@@ -162,7 +175,7 @@ function onDeviceReady(){
                     };
                     //從遠端服務更新
                     var request = $.ajax({
-                        url:"http://192.168.1.109:5000/api/items/"+SelectFieldName+"/",
+                        url:SRV_GetListItems+SelectFieldName+"/",
                         type: 'GET',
                         contentType: 'application/json; charset=utf-8', //"text/html; charset=utf-8"
                         dataType: 'json',
@@ -244,7 +257,7 @@ function onDeviceReady(){
                 var fs = rootDir.getFile(image_rel_path, null,
                     function(fileEntry){
                         fileEntry.file(function(file){
-                            var upload_url = "http://192.168.1.109:5000/api/post/"; //遠端服務位置名稱
+                            var upload_url = SRV_PostData; //遠端服務位置名稱
                             var options = new FileUploadOptions();
                             var filename = file.fullPath;
                             options.fileKey = "info_img1";
@@ -294,14 +307,13 @@ function onDeviceReady(){
 
 /*=============== page1_QueryData() 查詢資料 ===================*/
 function page1_QueryData(){
-    $('#page1_ul').empty();
+    $('#page1_first_content').empty();
     var request = $.ajax({
-        url:"http://192.168.1.109:5000/api/query/all/",
+        url:SRV_QueryAll,
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         success:function(r){
-            //alert("OK! ");
             var count = 0;
             for(var key in r){
                 count++;
@@ -314,7 +326,7 @@ function page1_QueryData(){
                             //圖片資料
                             var image_id_object = item[key1];
                             var image_id = image_id_object['$oid'];
-                            var image_url = "http://192.168.1.109:5000/api/file/" + image_id;
+                            var image_url = SRV_GetImage + image_id;
                         }else{
                             //文字資料
                             compareJSONKeyReturnValue(key1, FIELD_NAME_MAP);
@@ -394,10 +406,8 @@ function userCheck(){
     if(HASH_CODE=="" || HASH_CODE==null || HASH_CODE=="undefined" || HASH_CODE==false){
         return false;
     }
-
-
     var request = $.ajax({
-        url:"http://192.168.1.109:5000/api/user/check/"+HASH_CODE,
+        url:SRV_CheckUserHashCode+HASH_CODE,
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -415,7 +425,7 @@ function userCheck(){
                             //圖片資料
                             var image_id_object = item[key1];
                             var image_id = image_id_object['$oid'];
-                            var image_url = "http://192.168.1.109:5000/api/file/" + image_id;
+                            var image_url = SRV_GetImage + image_id;
                         }else{
                             //文字資料
                             compareJSONKeyReturnValue(key1, FIELD_NAME_MAP);

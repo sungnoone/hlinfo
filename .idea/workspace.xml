@@ -72,35 +72,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="47" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-10.178572">
+            <state line="54" column="68" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.30522087">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="44" selection-end="44" vertical-scroll-proportion="0.08388521">
+            <state line="337" column="49" selection-start="14458" selection-end="14458" vertical-scroll-proportion="-12.92">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#2490#3318#0" expanded="false" />
-                <element signature="e#3607#5704#0" expanded="false" />
-                <element signature="e#5817#9072#0" expanded="false" />
-                <element signature="e#9134#9800#0" expanded="false" />
-                <element signature="e#9860#13053#0" expanded="false" />
-                <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
+                <element signature="e#2489#3317#0" expanded="false" />
+                <element signature="e#3606#5703#0" expanded="false" />
+                <element signature="e#5863#9069#0" expanded="false" />
+                <element signature="e#9133#9799#0" expanded="false" />
+                <element signature="e#9859#13052#0" expanded="false" />
                 <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
                 <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
                 <element signature="n#!!block;n#userCheck#0" expanded="false" />
                 <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-                <marker date="1390467177085" expanded="false" signature="14423:14450" placeholder="..." />
-                <marker date="1390467177085" expanded="true" signature="14615:14631" placeholder="..." />
-                <marker date="1390467177085" expanded="false" signature="18408:18435" placeholder="..." />
-                <marker date="1390467177085" expanded="true" signature="18600:18616" placeholder="..." />
+                <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
+                <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
+                <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
+                <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -124,8 +123,8 @@
         <option value="$PROJECT_DIR$/res/xml/config.xml" />
         <option value="$PROJECT_DIR$/assets/www/js/sha256.js" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
-        <option value="$PROJECT_DIR$/assets/www/js/main.js" />
         <option value="$PROJECT_DIR$/readme.txt" />
+        <option value="$PROJECT_DIR$/assets/www/js/main.js" />
       </list>
     </option>
   </component>
@@ -564,8 +563,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.6724368" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32756326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2601626" sideWeight="0.7536618" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24633822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -645,20 +644,19 @@
         <state line="7" column="37" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2490#3318#0" expanded="false" />
-            <element signature="e#3607#5704#0" expanded="false" />
-            <element signature="e#5817#9072#0" expanded="false" />
-            <element signature="e#9134#9800#0" expanded="false" />
-            <element signature="e#9860#13053#0" expanded="false" />
-            <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
+            <element signature="e#2489#3317#0" expanded="false" />
+            <element signature="e#3606#5703#0" expanded="false" />
+            <element signature="e#5863#9069#0" expanded="false" />
+            <element signature="e#9133#9799#0" expanded="false" />
+            <element signature="e#9859#13052#0" expanded="false" />
             <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
             <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
             <element signature="n#!!block;n#userCheck#0" expanded="false" />
             <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-            <marker date="1390467177085" expanded="false" signature="14423:14450" placeholder="..." />
-            <marker date="1390467177085" expanded="true" signature="14615:14631" placeholder="..." />
-            <marker date="1390467177085" expanded="false" signature="18408:18435" placeholder="..." />
-            <marker date="1390467177085" expanded="true" signature="18600:18616" placeholder="..." />
+            <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
+            <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
+            <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
+            <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -741,13 +739,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="47" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-10.178572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
@@ -757,24 +748,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="44" selection-end="44" vertical-scroll-proportion="0.08388521">
+        <state line="337" column="49" selection-start="14458" selection-end="14458" vertical-scroll-proportion="-12.92">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2490#3318#0" expanded="false" />
-            <element signature="e#3607#5704#0" expanded="false" />
-            <element signature="e#5817#9072#0" expanded="false" />
-            <element signature="e#9134#9800#0" expanded="false" />
-            <element signature="e#9860#13053#0" expanded="false" />
-            <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
+            <element signature="e#2489#3317#0" expanded="false" />
+            <element signature="e#3606#5703#0" expanded="false" />
+            <element signature="e#5863#9069#0" expanded="false" />
+            <element signature="e#9133#9799#0" expanded="false" />
+            <element signature="e#9859#13052#0" expanded="false" />
             <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
             <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
             <element signature="n#!!block;n#userCheck#0" expanded="false" />
             <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-            <marker date="1390467177085" expanded="false" signature="14423:14450" placeholder="..." />
-            <marker date="1390467177085" expanded="true" signature="14615:14631" placeholder="..." />
-            <marker date="1390467177085" expanded="false" signature="18408:18435" placeholder="..." />
-            <marker date="1390467177085" expanded="true" signature="18600:18616" placeholder="..." />
+            <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
+            <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
+            <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
+            <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="68" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.30522087">
+          <folding />
         </state>
       </provider>
     </entry>

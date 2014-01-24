@@ -47,7 +47,6 @@ function onDeviceReady(){
     pictureSource=navigator.camera.PictureSourceType;
     destinationType=navigator.camera.DestinationType;
 
-
     //Page2 select Items refresh
     $(document).delegate("#page2", "pagecreate", function(){
         listItemSetup('year','page2_txtYear');
@@ -307,30 +306,40 @@ function onDeviceReady(){
 
 /*=============== page1_QueryData() 查詢資料 ===================*/
 function page1_QueryData(){
+    //清除舊結果，避免累加顯示
     $('#page1_first_content').empty();
+    // 使用 jQuery ajax 取得遠端資料。
+    // SRV_QueryAll：在全域變數即定義的查詢資料服務位址。
+    // 服務傳回的資料型態為JSON格式字串。
+    // 若與服務端溝通格式非JSON，應適當修正ajax參數，參考jQuery官網說明文件。
     var request = $.ajax({
         url:SRV_QueryAll,
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         success:function(r){
-            var count = 0;
+            var count = 0; // 計算資料筆數，偵錯兼充當collapsible的抬頭
             for(var key in r){
                 count++;
-                var item = $.parseJSON(r[key]);
+                var item = $.parseJSON(r[key]); // 轉化為json物件。
                 if(item){
-                    var title = count.toString();
-                    var span_content1 = '';
+                    var title = count.toString(); // 以計數作為collapsible的抬頭，可另以具意義字串替代。
+                    var span_content1 = ''; // 內容收集變數
+                    // 處理每筆資料每個欄位。
                     for(var key1 in item){
+                        // 如果是圖片欄位，取得ID值。
                         if(key1=='image'){
                             //圖片資料
                             var image_id_object = item[key1];
+                            // 由於後台是 mongodb，image 欄位儲存的是 ID 物件，透過 $oid 鍵名取值
+                            // 若是一般關聯式或單存只儲存ID字串，則直接 item[key1]取值即可。　
                             var image_id = image_id_object['$oid'];
+                            // 傳送 ID 給遠端服務，備妥檔案後，傳回圖檔完整的URL
+                            // 此範例不將圖檔存放行動裝置內，而是讓
                             var image_url = SRV_GetImage + image_id;
                         }else{
                             //文字資料
                             compareJSONKeyReturnValue(key1, FIELD_NAME_MAP);
-                            //span_content1 += '<p>'+key1+':'+item[key1]+'</p>';
                             span_content1 += '<p>'+JSON_KEY_MAP_VALUE+':'+item[key1]+'</p>';
                         }
                     }

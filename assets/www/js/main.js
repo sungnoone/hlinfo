@@ -56,7 +56,7 @@ function onDeviceReady(){
         listItemSetup('field','page2_txtField');
     });
 
-    //Page2 select Items refresh
+    // 進入帳號設定頁，提取存在檔案中的帳號資訊
     $(document).delegate("#page32", "pagecreate", function(){
         loadAccountInfo();
     });
@@ -248,22 +248,26 @@ function onDeviceReady(){
     function page2_Save(){
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
             function(fileSystem){
-                var image_path = $("#page2_cameraImage").prop("src");
-                alert($("#page2_cameraImage").prop("src"));
+                var image_path = $("#page2_cameraImage").prop("src"); // 取得照相圖檔位置
                 var rootDir = fileSystem.root;//檔案系統根路徑(filesystem用法上Phonegap官網API文件詳查)
-                var image_rel_path = image_path.replace(rootDir.fullPath+"/", ""); // 只要 root 以下的路徑
+                // 因為是從root開始抓，只要 root 以下的路徑，root自身路徑不要
+                var image_rel_path = image_path.replace(rootDir.fullPath+"/", "");
                 //照片+表單資料 傳遞給遠端服務
                 var fs = rootDir.getFile(image_rel_path, null,
                     function(fileEntry){
                         fileEntry.file(function(file){
-                            var upload_url = SRV_PostData; //遠端服務位置名稱
-                            var options = new FileUploadOptions();
+                            var upload_url = SRV_PostData; // 遠端服務位置，SRV_Post 在 main.js 開始即已定義的全域變數
+                            var options = new FileUploadOptions(); // 檔案上傳選項
                             var filename = file.fullPath;
-                            options.fileKey = "info_img1";
-                            options.fileName = filename.substr(filename.lastIndexOf("/")+1);
-                            options.mimeType = "image/jpeg";
+                            // 傳送選項設定
+                            options.fileKey = "info_img1"; // 圖檔 key name，服務端抓取時可能會用到
+                            options.fileName = filename.substr(filename.lastIndexOf("/")+1); // 不含路徑的檔案名稱
+                            options.mimeType = "image/jpeg"; // 檔案型態是圖檔
+                            // 傳送參數設定
                             var params = {};
                             // 表單文字資料藉由 Filesystem 的 FileTransfer 上傳檔案之便，以參數型式順便丟過去
+                            // 表單欄位ID、參數鍵名、後台服務端抓取鍵名，及資料庫欄位應做好一致性規劃對應
+                            // 亦可規劃中介端對應代理物件機制，但架構較為複雜，此例僅以簡便能通為原則。
                             params.info_Year = $("#page2_txtYear").val();
                             params.info_Create_Date = $("#page2_txtCreateDate").val();
                             params.info_Target = $("#page2_txtTarget").val();
@@ -273,17 +277,16 @@ function onDeviceReady(){
                             params.info_Subject = $("#page2_txtSubject").val();
                             params.info_Content = $("#page2_txtContent").val();
                             params.info_Memo = $("#page2_txtMemo").val();
-                            options.params = params;
-                            var ft = new FileTransfer();
+                            options.params = params; // 參數也是選項的一種
+                            var ft = new FileTransfer(); // 啟動 Phonegap Filesystem FileTransfer
                             // 開始上傳
                             ft.upload(filename, upload_url,
-                                function(r){
+                                function(r){ // 成功
                                     alert("Code = " + r.responseCode);
                                     alert("Response = " + r.response);
                                     alert("Sent = " + r.bytesSent);
-                                    //page2_Submit_TextData(r.response);
                                 },
-                                function(error){
+                                function(error){ // 錯誤
                                     alert("An error has occurred: Code = " + error.code);
                                     alert("upload error source " + error.source);
                                     alert("upload error target " + error.target);
@@ -291,14 +294,14 @@ function onDeviceReady(){
                                 options, true);
                         }, page2_Submit_Fail);
                     },
-                    function(error){
+                    function(error){ // getFile error
                         alert("filesystem getFile fail: "+error.code);
                     });
             },
-            page2_Submit_Fail
+            page2_Submit_Fail // requestFileSystem error
         );
     }
-
+    // common error handler
     function page2_Submit_Fail(evt){
         alert(evt.target.error.code);
     }
@@ -327,23 +330,24 @@ function page1_QueryData(){
                     var span_content1 = ''; // 內容收集變數
                     // 處理每筆資料每個欄位。
                     for(var key1 in item){
-                        // 如果是圖片欄位，取得ID值。
+                        // 如果是圖片欄位，取得ID值，然後透過ID值，通知伺服器備妥檔案。
                         if(key1=='image'){
                             //圖片資料
                             var image_id_object = item[key1];
                             // 由於後台是 mongodb，image 欄位儲存的是 ID 物件，透過 $oid 鍵名取值
                             // 若是一般關聯式或單存只儲存ID字串，則直接 item[key1]取值即可。　
                             var image_id = image_id_object['$oid'];
+                            // 此例不將圖檔存放行動裝置內，而是讓伺服器將檔案準備就緒的完整網址傳送回來
                             // 傳送 ID 給遠端服務，備妥檔案後，傳回圖檔完整的URL
-                            // 此範例不將圖檔存放行動裝置內，而是讓
                             var image_url = SRV_GetImage + image_id;
                         }else{
-                            //文字資料
+                            //如果是文字資料欄位，直接安排呈現方式
                             compareJSONKeyReturnValue(key1, FIELD_NAME_MAP);
                             span_content1 += '<p>'+JSON_KEY_MAP_VALUE+':'+item[key1]+'</p>';
                         }
                     }
-                    // 有圖片
+                    // 有圖片的網頁呈現方式安排
+                    // 這裡只簡單利用 jQuery Mobile 的 Collapsible 物件呈現。
                     if(image_url){
                         span_content1 += '<img  style="width: 100px; height: 100px" src="'+ image_url +'" />';
                     }

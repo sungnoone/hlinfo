@@ -10,7 +10,7 @@
     <file path="/AndroidManifest.xml" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1388728157988" ignored="false" />
     <file path="/fragment.java" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1388728172615" ignored="false" />
     <file path="/index.html" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1389832929669" ignored="false" />
-    <file path="/main.js" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1390459780551" ignored="false" />
+    <file path="/main.js" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1390891926626" ignored="false" />
     <file path="/readme.txt" changelist="8707c1a6-80e0-485c-8f32-9e49df21c179" time="1390468129843" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,34 +72,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="68" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.30522087">
+            <state line="42" column="32" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-1.3571428">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="49" selection-start="14458" selection-end="14458" vertical-scroll-proportion="-12.92">
+            <state line="221" column="33" selection-start="9129" selection-end="9129" vertical-scroll-proportion="0.10497238">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#2489#3317#0" expanded="false" />
-                <element signature="e#3606#5703#0" expanded="false" />
-                <element signature="e#5863#9069#0" expanded="false" />
-                <element signature="e#9133#9799#0" expanded="false" />
-                <element signature="e#9859#13052#0" expanded="false" />
-                <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
+                <element signature="e#3601#5698#0" expanded="false" />
+                <element signature="e#9892#13294#0" expanded="false" />
+                <element signature="e#13358#13403#0" expanded="false" />
+                <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
                 <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
                 <element signature="n#!!block;n#userCheck#0" expanded="false" />
                 <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-                <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
-                <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
-                <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
-                <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
+                <marker date="1390879887710" expanded="true" signature="15406:15433" placeholder="..." />
+                <marker date="1390879887710" expanded="true" signature="15598:15614" placeholder="..." />
+                <marker date="1390879887710" expanded="true" signature="19391:19418" placeholder="..." />
+                <marker date="1390879887710" expanded="true" signature="19583:19599" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -162,7 +160,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -322,6 +319,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -541,8 +539,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1284" height="899" extended-state="1" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1284" height="899" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -555,7 +553,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22841966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -563,12 +560,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2601626" sideWeight="0.7536618" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24633822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2601626" sideWeight="0.7672956" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2327044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -644,19 +642,17 @@
         <state line="7" column="37" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2489#3317#0" expanded="false" />
-            <element signature="e#3606#5703#0" expanded="false" />
-            <element signature="e#5863#9069#0" expanded="false" />
-            <element signature="e#9133#9799#0" expanded="false" />
-            <element signature="e#9859#13052#0" expanded="false" />
-            <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
+            <element signature="e#3601#5698#0" expanded="false" />
+            <element signature="e#9892#13294#0" expanded="false" />
+            <element signature="e#13358#13403#0" expanded="false" />
+            <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
             <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
             <element signature="n#!!block;n#userCheck#0" expanded="false" />
             <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-            <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
-            <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
-            <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
-            <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="15406:15433" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="15598:15614" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="19391:19418" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="19583:19599" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -673,23 +669,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/jquery-2.0.3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/jquery.mobile-1.4.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/cordova.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="193" selection-end="193" vertical-scroll-proportion="0.1637931">
-          <folding />
-        </state>
+        <state line="5" column="27" selection-start="193" selection-end="193" vertical-scroll-proportion="0.1637931" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/snoone/hlinfo/MyActivity.java">
@@ -710,21 +700,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/datePickerPlugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="249" selection-end="249" vertical-scroll-proportion="0.26243094">
-          <folding />
-        </state>
+        <state line="10" column="46" selection-start="249" selection-end="249" vertical-scroll-proportion="0.26243094" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="58" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.70640177">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="75" selection-start="1614" selection-end="1614" vertical-scroll-proportion="1.1551362">
           <folding />
         </state>
       </provider>
@@ -741,37 +722,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="48" selection-start="441" selection-end="441" vertical-scroll-proportion="0.2721354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="32" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-1.3571428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="49" selection-start="14458" selection-end="14458" vertical-scroll-proportion="-12.92">
+        <state line="221" column="33" selection-start="9129" selection-end="9129" vertical-scroll-proportion="0.10497238">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#2489#3317#0" expanded="false" />
-            <element signature="e#3606#5703#0" expanded="false" />
-            <element signature="e#5863#9069#0" expanded="false" />
-            <element signature="e#9133#9799#0" expanded="false" />
-            <element signature="e#9859#13052#0" expanded="false" />
-            <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
+            <element signature="e#3601#5698#0" expanded="false" />
+            <element signature="e#9892#13294#0" expanded="false" />
+            <element signature="e#13358#13403#0" expanded="false" />
+            <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
             <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
             <element signature="n#!!block;n#userCheck#0" expanded="false" />
             <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
-            <marker date="1390554736196" expanded="false" signature="14929:14956" placeholder="..." />
-            <marker date="1390554736196" expanded="true" signature="15121:15137" placeholder="..." />
-            <marker date="1390554736196" expanded="false" signature="18914:18941" placeholder="..." />
-            <marker date="1390554736196" expanded="true" signature="19106:19122" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="15406:15433" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="15598:15614" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="19391:19418" placeholder="..." />
+            <marker date="1390879887710" expanded="true" signature="19583:19599" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="68" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.30522087">
-          <folding />
         </state>
       </provider>
     </entry>

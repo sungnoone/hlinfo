@@ -13,6 +13,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" charset="utf-8" src="datePickerPlugin.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/sha256.jquery.debug.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.base64.js"></script>
     <title>情報蒐集</title>
 </head>
 <body style="text-align: center;">
@@ -24,6 +25,7 @@
     </div><!-- /header -->
     <div data-role="content">
         <a href="#page1" data-role="button"  data-inline="false" data-theme="c" data-icon="search">情報查詢</a>
+        <a href="#page4" data-role="button"  data-inline="false" data-theme="c" data-icon="search">情報查詢(須驗證)</a>
         <a href="#page2" data-role="button"  data-inline="false" data-theme="c" data-icon="plus">情報建立</a>
         <a href="#page3" data-role="button"  data-inline="false" data-theme="c" data-icon="gear">系統設定</a>
     </div><!-- /content -->
@@ -138,6 +140,20 @@
                 </div>
             </fieldset>
         </form>
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<!-- 情報查詢(須驗證)page4  -->
+<div data-role="page" id="page4">
+    <div data-role="header">
+        <a href="#page0" data-role="home">Home</a>
+        <h1>情報查詢</h1>
+    </div><!-- /header -->
+    <div data-role="content" id="page4_content">
+        <a href="#" data-role="button" id="page4_btnGet" onclick="page4_QueryData();">查詢</a>
+        <p> </p>
+        <div id="page4_first_content">
+        </div>
     </div><!-- /content -->
 </div><!-- /page -->
 

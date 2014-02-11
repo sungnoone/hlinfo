@@ -8,11 +8,15 @@
 //var SRV_GetImage = "http://192.168.1.109:5000/api/file/";//透過ID抓圖 需要URL參數
 //var SRV_CheckUserHashCode = "http://192.168.1.109:5000/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
 
-var SRV_GetListItems = "http://infosrv.hanlin.com.tw/api/items/"; // 需要URL參數
-var SRV_PostData = "http://infosrv.hanlin.com.tw/api/post/"; //上傳資料
-var SRV_QueryAll = "http://infosrv.hanlin.com.tw/api/query/all/"; // 查詢所有資料
-var SRV_GetImage = "http://infosrv.hanlin.com.tw/api/file/";//透過ID抓圖 需要URL參數
-var SRV_CheckUserHashCode = "http://infosrv.hanlin.com.tw/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
+var SRV_IP = "http://192.168.1.109:5000";
+//var SRV_IP = "http://infosrv.hanlin.com.tw";
+
+var SRV_GetListItems = SRV_IP+"/api/items/";// 需要URL參數
+var SRV_PostData = SRV_IP+"/api/post/";//上傳資料
+var SRV_QueryAll = SRV_IP+"/api/query/all/"; // 查詢所有資料
+var SRV_Security_QueryAll = SRV_IP+"/api/security/query/all/"; // 查詢所有資料(須驗證)
+var SRV_GetImage = SRV_IP+"/api/file/";//透過ID抓圖 需要URL參數
+var SRV_CheckUserHashCode = SRV_IP+"/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
 
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
@@ -37,7 +41,8 @@ var JSON_KEY_MAP_VALUE = "";
 var file_account = "my.txt";
 
 //認證資訊
-var HASH_CODE = "";
+var HASH_CODE = "";// sha256
+var BASE64_CODE = "";// Encoding sha256 by base64
 var USERNAME = "";
 var PASSWORD = "";
 
@@ -365,6 +370,76 @@ function page1_QueryData(){
     });
 }
 
+/*=============== page4_QueryData() 查詢資料(須驗證) ===================*/
+function page4_QueryData(){
+    alert("page4_QueryData()");
+    if(HASH_CODE=="" || HASH_CODE==null || HASH_CODE=="undefined" || HASH_CODE==false){
+        return false;
+    }
+    if(BASE64_CODE=="" || BASE64_CODE==null || BASE64_CODE=="undefined" || BASE64_CODE==false){
+        return false;
+    }
+    alert(BASE64_CODE);
+    //清除舊結果，避免累加顯示
+    $('#page4_first_content').empty();
+    // 使用 jQuery ajax 取得遠端資料。
+    // SRV_QueryAll：在全域變數即定義的查詢資料服務位址。
+    // 服務傳回的資料型態為JSON格式字串。
+    // 若與服務端溝通格式非JSON，應適當修正ajax參數，參考jQuery官網說明文件。
+    var auth_code = '{"auth_code":"' +BASE64_CODE + '"}';
+    alert(auth_code);
+    var request = $.ajax({
+        url:SRV_Security_QueryAll,
+        type: 'POST',
+        contentType: 'application/json; charset=utf-8',
+        data:auth_code,
+        dataType: 'json',
+        success:function(r){
+            var count = 0; // 計算資料筆數，偵錯兼充當collapsible的抬頭
+            for(var key in r){
+                count++;
+                var item = $.parseJSON(r[key]); // 轉化為json物件。
+                if(item){
+                    var title = count.toString(); // 以計數作為collapsible的抬頭，可另以具意義字串替代。
+                    var span_content1 = ''; // 內容收集變數
+                    // 處理每筆資料每個欄位。
+                    for(var key1 in item){
+                        // 如果是圖片欄位，取得ID值，然後透過ID值，通知伺服器備妥檔案。
+                        if(key1=='image'){
+                            //圖片資料
+                            var image_id_object = item[key1];
+                            // 由於後台是 mongodb，image 欄位儲存的是 ID 物件，透過 $oid 鍵名取值
+                            // 若是一般關聯式或單存只儲存ID字串，則直接 item[key1]取值即可。　
+                            var image_id = image_id_object['$oid'];
+                            // 此例不將圖檔存放行動裝置內，而是讓伺服器將檔案準備就緒的完整網址傳送回來
+                            // 傳送 ID 給遠端服務，備妥檔案後，傳回圖檔完整的URL
+                            // 如果是完整驗證，圖片服務也應使用具有驗證要求的服務網址
+                            var image_url = SRV_GetImage + image_id;
+                        }else{
+                            //如果是文字資料欄位，直接安排呈現方式
+                            compareJSONKeyReturnValue(key1, FIELD_NAME_MAP);
+                            span_content1 += '<p>'+JSON_KEY_MAP_VALUE+':'+item[key1]+'</p>';
+                        }
+                    }
+                    // 有圖片的網頁呈現方式安排
+                    // 這裡只簡單利用 jQuery Mobile 的 Collapsible 物件呈現。
+                    if(image_url){
+                        span_content1 += '<img  style="width: 100px; height: 100px" src="'+ image_url +'" />';
+                    }
+                    var html = '<div data-role="collapsible" data-collapsed="true"><h3>'+title+'</h3><span style="text-align: left">'+span_content1+'</span></div>';
+                    var $element = $(html).appendTo($('#page4_first_content'));
+                    $element.collapsible();
+                }
+            }
+        },
+        error:function(error){
+            alert("An error has occurred: Code = " + error.code);
+            alert("upload error source " + error.source);
+            alert("upload error target " + error.target);
+        }
+    });
+}
+
 /*=============== compareJSONKeyReturnValue() 比對JSON取值 ===================*/
 function compareJSONKeyReturnValue(compareString, jsonObject){
     JSONMAPVALUE = "";
@@ -383,6 +458,7 @@ function compareJSONKeyReturnValue(compareString, jsonObject){
 function saveUserAccount(){
     //儲存帳號資訊
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
+        alert("Before saving file");
         var username = $("#page32_UserName").val();
         var password = $("#page32_Password").val();
         fileSystem.root.getFile(file_account, {create: true, exclusive: false}, function(fileEntry){
@@ -390,8 +466,34 @@ function saveUserAccount(){
                 writer.onwriteend = function(evt) {
                     alert(file_account+"儲存完成!");
                 };
-                writer.write('{"username":"'+username+'","password":"'+password+'"}');//結果寫入
+                writer.write('{"username":"'+username.toUpperCase()+'","password":"'+password+'"}');//結果寫入
+                alert("After saving file");
             },fileSystemFail);
+        }, fileSystemFail);
+    }, fileSystemFail);
+    //帳號儲存完畢，一律順便更新帳號資訊相關變數資訊
+    //其他功能在執行時，就不要重複執行讀取帳號檔案的動作。
+    // 帳號資訊檔案載入
+    alert("Before Load file");
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
+        fileSystem.root.getFile(file_account, null, function(fileEntry){
+            fileEntry.file(function(file){
+                var reader = new FileReader();
+                reader.onloadend = function(evt){
+                    var s = evt.target.result;
+                    var obj_json = $.parseJSON(s);
+                    USERNAME = obj_json.username.toUpperCase();
+                    alert(USERNAME);
+                    PASSWORD = obj_json.password;
+                    alert(PASSWORD);
+                    HASH_CODE = $.sha256(USERNAME+PASSWORD);
+                    alert(HASH_CODE);
+                    BASE64_CODE = $.base64.btoa(HASH_CODE,true);
+                    alert(BASE64_CODE);
+                };
+                reader.readAsText(file);
+                alert("After Load file");
+            }, fileSystemFail);
         }, fileSystemFail);
     }, fileSystemFail);
 }
@@ -465,6 +567,31 @@ function userCheck(){
 
 }
 
+/*=============== makeSecurityCode()  提取帳號資訊驗證===================*/
+function makeSecurityCode(){
+    // 帳號資訊檔案載入
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
+        fileSystem.root.getFile(file_account, null, function(fileEntry){
+            fileEntry.file(function(file){
+                var reader = new FileReader();
+                reader.onloadend = function(evt){
+                    var s = evt.target.result;
+                    var obj_json = $.parseJSON(s);
+                    USERNAME = obj_json.username.toUpperCase();
+                    alert(USERNAME);
+                    PASSWORD = obj_json.password;
+                    alert(PASSWORD);
+                    HASH_CODE = $.sha256(USERNAME+PASSWORD);
+                    alert(HASH_CODE);
+                    BASE64_CODE = $.base64.btoa(HASH_CODE,true);
+                    alert(BASE64_CODE);
+                };
+                reader.readAsText(file);
+            }, fileSystemFail);
+        }, fileSystemFail);
+    }, fileSystemFail);
+}
+
 /*=============== loadAccountInfo()  載入帳號資訊到頁面上===================*/
 function loadAccountInfo(){
     // 帳號資訊檔案載入
@@ -475,12 +602,13 @@ function loadAccountInfo(){
                 reader.onloadend = function(evt){
                     var s = evt.target.result;
                     var obj_json = $.parseJSON(s);
-                    $("#page32_UserName").attr("value", obj_json.username);
-                    $("#page32_Password").attr("value", obj_json.password);
-                    HASH_CODE = $.sha256(obj_json.password);
-                    USERNAME = obj_json.username;
+                    USERNAME = obj_json.username.toUpperCase();
                     PASSWORD = obj_json.password;
-                }
+                    HASH_CODE = $.sha256(USERNAME+PASSWORD);
+                    BASE64_CODE = $.base64.btoa(HASH_CODE,true);
+                    $("#page32_UserName").attr("value", USERNAME);
+                    $("#page32_Password").attr("value", PASSWORD);
+                };
                 reader.readAsText(file);
             }, fileSystemFail);
         }, fileSystemFail);

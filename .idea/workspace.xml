@@ -72,12 +72,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="67" selection-start="7680" selection-end="7680" vertical-scroll-proportion="-13.571428">
+            <state line="15" column="98" selection-start="945" selection-end="945" vertical-scroll-proportion="0.545977">
               <folding>
                 <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -87,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="381" column="28" selection-start="16561" selection-end="16561" vertical-scroll-proportion="0.34363636">
+            <state line="16" column="69" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#2604#3432#0" expanded="false" />
@@ -101,13 +102,16 @@
                 <element signature="e#13478#13523#0" expanded="false" />
                 <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
                 <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
+                <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
                 <element signature="n#!!block;n#userCheck#0" expanded="false" />
-                <marker date="1392098947186" expanded="false" signature="15526:15553" placeholder="..." />
-                <marker date="1392098947186" expanded="false" signature="15718:15734" placeholder="..." />
-                <marker date="1392098947186" expanded="true" signature="18643:18670" placeholder="..." />
-                <marker date="1392098947186" expanded="true" signature="18835:18851" placeholder="..." />
-                <marker date="1392098947186" expanded="false" signature="23804:23831" placeholder="..." />
-                <marker date="1392098947186" expanded="true" signature="23996:24012" placeholder="..." />
+                <element signature="n#!!block;n#makeSecurityCode#0" expanded="false" />
+                <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
+                <marker date="1392251701770" expanded="false" signature="15526:15553" placeholder="..." />
+                <marker date="1392251701770" expanded="false" signature="15718:15734" placeholder="..." />
+                <marker date="1392251701770" expanded="true" signature="18611:18638" placeholder="..." />
+                <marker date="1392251701770" expanded="true" signature="18803:18819" placeholder="..." />
+                <marker date="1392251701770" expanded="false" signature="23620:23647" placeholder="..." />
+                <marker date="1392251701770" expanded="true" signature="23812:23828" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -549,8 +553,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1284" height="899" extended-state="7" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1284" height="899" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -572,7 +576,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2601626" sideWeight="0.76830894" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23169108" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24611032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -729,22 +733,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="67" selection-start="7680" selection-end="7680" vertical-scroll-proportion="-13.571428">
-          <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="381" column="28" selection-start="16561" selection-end="16561" vertical-scroll-proportion="0.34363636">
+        <state line="16" column="69" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#2604#3432#0" expanded="false" />
@@ -755,13 +746,30 @@
             <element signature="e#13478#13523#0" expanded="false" />
             <element signature="n#!!block;n#page1_QueryData#0" expanded="false" />
             <element signature="n#!!block;n#compareJSONKeyReturnValue#0" expanded="false" />
+            <element signature="n#!!block;n#saveUserAccount#0" expanded="false" />
             <element signature="n#!!block;n#userCheck#0" expanded="false" />
-            <marker date="1392098947186" expanded="false" signature="15526:15553" placeholder="..." />
-            <marker date="1392098947186" expanded="false" signature="15718:15734" placeholder="..." />
-            <marker date="1392098947186" expanded="true" signature="18643:18670" placeholder="..." />
-            <marker date="1392098947186" expanded="true" signature="18835:18851" placeholder="..." />
-            <marker date="1392098947186" expanded="false" signature="23804:23831" placeholder="..." />
-            <marker date="1392098947186" expanded="true" signature="23996:24012" placeholder="..." />
+            <element signature="n#!!block;n#makeSecurityCode#0" expanded="false" />
+            <element signature="n#!!block;n#loadAccountInfo#0" expanded="false" />
+            <marker date="1392251701770" expanded="false" signature="15526:15553" placeholder="..." />
+            <marker date="1392251701770" expanded="false" signature="15718:15734" placeholder="..." />
+            <marker date="1392251701770" expanded="true" signature="18611:18638" placeholder="..." />
+            <marker date="1392251701770" expanded="true" signature="18803:18819" placeholder="..." />
+            <marker date="1392251701770" expanded="false" signature="23620:23647" placeholder="..." />
+            <marker date="1392251701770" expanded="true" signature="23812:23828" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="98" selection-start="945" selection-end="945" vertical-scroll-proportion="0.545977">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#4;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>

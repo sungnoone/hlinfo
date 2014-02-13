@@ -372,7 +372,6 @@ function page1_QueryData(){
 
 /*=============== page4_QueryData() 查詢資料(須驗證) ===================*/
 function page4_QueryData(){
-    alert("page4_QueryData()");
     if(HASH_CODE=="" || HASH_CODE==null || HASH_CODE=="undefined" || HASH_CODE==false){
         return false;
     }
@@ -483,13 +482,9 @@ function saveUserAccount(){
                     var s = evt.target.result;
                     var obj_json = $.parseJSON(s);
                     USERNAME = obj_json.username.toUpperCase();
-                    alert(USERNAME);
                     PASSWORD = obj_json.password;
-                    alert(PASSWORD);
                     HASH_CODE = $.sha256(USERNAME+PASSWORD);
-                    alert(HASH_CODE);
                     BASE64_CODE = $.base64.btoa(HASH_CODE,true);
-                    alert(BASE64_CODE);
                 };
                 reader.readAsText(file);
                 alert("After Load file");

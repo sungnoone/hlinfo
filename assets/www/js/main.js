@@ -8,8 +8,8 @@
 //var SRV_GetImage = "http://192.168.1.109:5000/api/file/";//透過ID抓圖 需要URL參數
 //var SRV_CheckUserHashCode = "http://192.168.1.109:5000/api/user/check/"; //驗證使用者雜湊碼(sha1) 需要URL參數
 
-var SRV_IP = "http://192.168.1.109:5000";
-//var SRV_IP = "http://infosrv.hanlin.com.tw";
+//var SRV_IP = "http://192.168.1.109:5000";
+var SRV_IP = "http://infosrv.hanlin.com.tw";
 
 var SRV_GetListItems = SRV_IP+"/api/items/";// 需要URL參數
 var SRV_PostData = SRV_IP+"/api/post/";//上傳資料
